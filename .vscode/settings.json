@@ -1,0 +1,12 @@
+{
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "haskell.formattingProvider": "fourmolu",
+  "haskell.manageHLS": "PATH",
+  "haskell.serverExecutablePath": "${workspaceFolder}/.vscode/haskell-language-server.link",
+  "haskell.upgradeGHCup": false,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "vs-seti",
+}

@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "denoland.vscode-deno",
+    "esbenp.prettier-vscode",
+    "mkhl.direnv",
+    "jnoortheen.nix-ide",
+    "haskell.haskell",
+  ]
+}

@@ -1,0 +1,137 @@
+cabal-version:      3.4
+name:               plutarch-csa
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Ian Burzynski
+maintainer:         23251244+iburzynski@users.noreply.github.com
+-- copyright:
+category:           Development
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common common
+  default-language: GHC2021
+  ghc-options:
+    -Werror -Wall -Wcompat -Wincomplete-uni-patterns
+    -Wno-unused-do-bind -Wno-partial-type-signatures
+    -Wincomplete-record-updates
+    -Wmissing-deriving-strategies -Wno-name-shadowing -Wunused-foralls
+    -fprint-explicit-foralls -fprint-explicit-kinds -Wunused-do-bind
+
+  build-depends:    
+    , base
+    , aeson
+    , aeson-pretty
+    , base16-bytestring
+    , bytestring
+    , cardano-binary
+    , cborg
+    , data-default
+    , directory
+    , liqwid-plutarch-extra
+    , plutarch
+    , plutarch-extra
+    , plutus-core
+    , plutus-ledger-api
+    , plutus-simple-model
+    , plutus-tx
+    , ply-core
+    , ply-plutarch
+    , serialise
+    , text
+
+  default-extensions:
+    NoFieldSelectors
+    NoStarIsType
+    BangPatterns
+    BinaryLiterals
+    ConstrainedClassMethods
+    ConstraintKinds
+    DataKinds
+    DeriveAnyClass
+    DeriveDataTypeable
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveLift
+    DeriveTraversable
+    DerivingStrategies
+    DerivingVia
+    DoAndIfThenElse
+    DuplicateRecordFields
+    EmptyCase
+    EmptyDataDecls
+    EmptyDataDeriving
+    ExistentialQuantification
+    ExplicitForAll
+    FlexibleContexts
+    FlexibleInstances
+    ForeignFunctionInterface
+    GADTSyntax
+    GeneralisedNewtypeDeriving
+    HexFloatLiterals
+    ImplicitPrelude
+    ImportQualifiedPost
+    InstanceSigs
+    KindSignatures
+    LambdaCase
+    MonomorphismRestriction
+    MultiParamTypeClasses
+    NamedFieldPuns
+    NamedWildCards
+    NumericUnderscores
+    OverloadedLabels
+    OverloadedRecordDot
+    OverloadedStrings
+    PackageImports
+    PartialTypeSignatures
+    PatternGuards
+    PolyKinds
+    PostfixOperators
+    QualifiedDo
+    RankNTypes
+    RecordWildCards
+    RelaxedPolyRec
+    ScopedTypeVariables
+    StandaloneDeriving
+    StandaloneKindSignatures
+    TupleSections
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    TypeSynonymInstances
+    UndecidableInstances
+    ViewPatterns
+
+library
+    import:           common
+    exposed-modules:  Sample
+    -- other-modules:
+    -- other-extensions:
+    build-depends:
+    hs-source-dirs:   src
+
+executable plutarch-csa
+    import:           common
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:
+      , plutarch-csa
+
+    hs-source-dirs:   app
+
+test-suite plutarch-csa-test
+    import:           common
+
+    -- other-modules:
+    -- other-extensions:
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+      , plutarch-csa
