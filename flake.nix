@@ -65,6 +65,13 @@
                     justusadam.language-haskell
                     mkhl.direnv
                     esbenp.prettier-vscode
+                  ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+                    {
+                      name = "aiken";
+                      publisher = "TxPipe";
+                      version = "1.0.8";
+                      sha256 = "99b000d27a710d7313dd2639a4ff56ec9d38dcbbbf126c36f259683217a3a6f9";
+                    }
                   ];
                 })
                 xdg-utils

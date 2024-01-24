@@ -63,7 +63,7 @@ Plutarch dev environment for EMURGO CSA
   - After completing installation and hooking `direnv` into your preferred terminal shell, open a new terminal session, enter the project directory and run `direnv allow` to allow `direnv` to load the `.envrc` file.
 
 ### 4. **Build Haskell project with `cabal`**
-  - After entering the project directory in your terminal session and allowing the environment to load via `direnv` (or run `nix develop --accept-flake-config` if not using `direnv`), run `cabal update; cabal build` to update `cabal` and build the Haskell (Plutarch) project.
+  - After entering the project directory in your terminal session and allowing the environment to load via `direnv` (or run `nix develop --accept-flake-config` if not using `direnv`), run `cabal user-config init; cabal update; cabal build` to update `cabal` and build the Haskell (Plutarch) project.
   - You can use `cabal run` to run the project's executable (in `app/Main.hs`) and serialize the sample contracts to the `compiled` directory.
 
 ### 5. **Use bundled VS Codium editor (Optional)**
