@@ -25,5 +25,6 @@ cabal.project.local~
 .direnv/
 .pre-commit-config.yaml
 .cabal/
-compiled
+compiled/*
+!compiled/.gitkeep
 *.DS_STORE
