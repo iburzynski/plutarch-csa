@@ -109,7 +109,9 @@ common common
 
 library
     import:           common
-    exposed-modules:  Sample
+    exposed-modules:  
+      , Sample
+      , Utils
     -- other-modules:
     -- other-extensions:
     build-depends:
