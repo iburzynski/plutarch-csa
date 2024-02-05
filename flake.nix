@@ -3,10 +3,13 @@
 
   nixConfig = {
     extra-experimental-features = [ "nix-command" "flakes" "ca-derivations" "configurable-impure-env" "auto-allocate-uids" ];
-    extra-substituters = [ "https://cache.iog.io" "https://cache.zw3rk.com" ];
+    extra-substituters = [
+      "https://cache.iog.io"
+      # "https://cache.zw3rk.com" 
+    ];
     extra-trusted-public-keys = [
       "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
-      "loony-tools:pr9m4BkM/5/eSTZlkQyRt57Jz7OMBxNSUiMC4FkcNfk="
+      # "loony-tools:pr9m4BkM/5/eSTZlkQyRt57Jz7OMBxNSUiMC4FkcNfk="
     ];
     allow-import-from-derivation = "true";
     max-jobs = "auto";
